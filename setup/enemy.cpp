@@ -1,10 +1,16 @@
 #include "enemy.h"
-#include "player.h"
+#include "map_size.cpp"
 #include <ctime>
 #include <iostream>
 
+bool clockStarted = false;
+
+void startClock() {std::srand(time(NULL));}
+
 Enemy::Enemy()
 {
+    if(!clockStarted) {startClock(); clockStarted = true;}
+
     generatePosition(coordinate[axis::x], 'x');
     generatePosition(coordinate[axis::y], 'y');
 }
@@ -18,8 +24,7 @@ void Enemy::generatePosition(int &position, const char &axis)
 
 int Enemy::randomNumberGenerator(int lowerBound, int upperBound)
 {
-    std::srand(time(NULL));
-    return (rand() % upperBound) + lowerBound; 
+    return (rand() % (upperBound+1)) + lowerBound; 
 }
 
 
