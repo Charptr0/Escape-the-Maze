@@ -19,6 +19,8 @@ bool Player::checkUserInput(const char &userInput)
 void Player::move(const char &userInput)
 {
     int prevCoord[2];
+
+    //save the prev location just can case if the player go out of bound
     prevCoord[axis::x] = this->coordinate[axis::x];
     prevCoord[axis::y] = this->coordinate[axis::y];
 
@@ -60,6 +62,7 @@ void Player::move(const char &userInput)
             break;
     }
 
+    //if the player has gone outside the border, this will teleport them back to their previous location
     if(this->coordinate[axis::x] < 0 || this->coordinate[axis::x] >= (MAX_X-1) || this->coordinate[axis::y] <= 0 || this->coordinate[axis::y] >= (MAX_Y-1))
     {
         coordinate[axis::x] = prevCoord[axis::x];

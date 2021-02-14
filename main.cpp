@@ -1,5 +1,6 @@
 #include <iostream> 
 #include "setup/player.cpp"
+#include "setup/enemy.cpp"
 
 using std::cout;
 using std::cin;
@@ -37,10 +38,13 @@ void getUserInput()
 
 int main()
 {
+    /*
     while(!gameOver)
     {
         draw();
         getUserInput();
         cout << player.x() << "\t" << player.y() << "\n";
     }
+    */
+   
 }
