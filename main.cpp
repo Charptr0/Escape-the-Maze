@@ -4,11 +4,6 @@
 using std::cout;
 using std::cin;
 
-//constants------------------------------------------
-const int MAX_X = 30;
-const int MAX_Y = 10;
-//---------------------------------------------------
-
 //global variables-----------------------------------
 Player player;
 bool gameOver = false;
