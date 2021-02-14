@@ -42,8 +42,8 @@ void Enemy::move()
     int moveX_decider = randomNumberGenerator(0,1);
     int moveY_decider = randomNumberGenerator(0,1);
 
-    if(move == axis::x) {moveX_decider == 0 ? this->coordinate[axis::x] -= 1 : this->coordinate[axis::x] += 1;}
-    else {moveY_decider == 0 ? this->coordinate[axis::y] -= 1 : this->coordinate[axis::y] += 1;}
+    if(move == axis::x) {moveX_decider == 0 ? coordinate[axis::x] -= 1 : coordinate[axis::x] += 1;}
+    else {moveY_decider == 0 ? coordinate[axis::y] -= 1 : coordinate[axis::y] += 1;}
 
 }
 

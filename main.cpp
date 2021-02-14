@@ -10,6 +10,7 @@ using std::cin;
 //global variables-----------------------------------
 Player player;
 std::vector<Enemy>enemies;
+std::vector<std::vector<int>>deathPosition;
 bool gameOver = false;
 //---------------------------------------------------
 
@@ -17,12 +18,13 @@ bool gameOver = false;
 void spawnEnemies()
 {
     int area = MAX_X * MAX_Y;
-    int totalEnemies = 1; //area / 10;
+    int totalEnemies = 10; //area / 10;
     for(int i = 0; i < totalEnemies; i++)
     {
         Enemy e;
         enemies.push_back(e);
         cout << e.x() << "\t" << e.y() << "\n";
+        deathPosition.push_back({e.x(), e.y()});
     }
 }
 
@@ -40,10 +42,9 @@ void draw()
             for(size_t k = 0; k < enemies.size(); k++) //handle the enemies
             {
                 //cout << enemies[k].x() << "\t" << enemies[k].y() << "\n";
-                if(enemies[k].x() == j && enemies[k].y() == i) {cout << "X"; break;}
+                if(deathPosition[k][axis::x] == j && deathPosition[k][axis::y] == i) {cout << "X"; break;}
                 
                 else if(k == (enemies.size()-1)) {cout << "-";}
-
             }
         }
 
@@ -64,12 +65,15 @@ void getUserInput()
 
 void logic()
 {
+    deathPosition.clear();
+
     for(Enemy enemy : enemies)
     {
         if(player == enemy) {gameOver = true; break;}
         //cout << enemy.x() << "\t" << enemy.y() << "\n";
         enemy.move();
         cout << enemy.x() << "\t" << enemy.y() << "\n";
+        deathPosition.push_back({enemy.x(), enemy.y()});
     }
 }
 
