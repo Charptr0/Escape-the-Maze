@@ -20,13 +20,6 @@ void Entity::setPosition(const int coordinate[2])
 }
 
 
-/*
-bool Entity::operator==(const Entity &e1, const Entity &e2)
-{
-    if(e1.x() == e2.x() && e1.y() == e2.y()) {return true;}
-    else return false;
-}
-*/
 
 
 

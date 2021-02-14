@@ -2,6 +2,7 @@
 #include <vector>
 #include "setup/player.cpp"
 #include "setup/enemy.cpp"
+#include "setup/operators.cpp"
 
 using std::cout;
 using std::cin;

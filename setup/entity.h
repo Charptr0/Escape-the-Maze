@@ -21,5 +21,3 @@ class Entity
     void setSymbol(char &symbol);
 
 };
-
-//bool Entity::operator==(const Entity &e1, const Entity &e2);
