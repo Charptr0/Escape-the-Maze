@@ -14,7 +14,6 @@ class Entity
     int x() const;
     int y() const;
 
-
     void setX(const int &x);
     void setY(const int&y);
     void setPosition(const int coord[2]);

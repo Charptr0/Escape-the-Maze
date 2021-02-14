@@ -15,10 +15,11 @@ Enemy::Enemy()
     generatePosition(coordinate[axis::y], 'y');
 }
 
+//generate a random location inside the map
 void Enemy::generatePosition(int &position, const char &axis)
 {
-    if(axis == 'x') {position = randomNumberGenerator(1, (MAX_X-1));}
-    else if(axis == 'y') {position = randomNumberGenerator(1, (MAX_Y-1));}
+    if(axis == 'x') {position = randomNumberGenerator(1, (MAX_X-3));}
+    else if(axis == 'y') {position = randomNumberGenerator(1, (MAX_Y-3));}
     else return;
 }
 

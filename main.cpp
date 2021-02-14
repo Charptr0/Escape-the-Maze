@@ -13,10 +13,17 @@ std::vector<Enemy>enemies;
 bool gameOver = false;
 //---------------------------------------------------
 
-int spawnEnemies()
+//based on the area of the map, it will spawn the apprioate amount of enemies
+void spawnEnemies()
 {
     int area = MAX_X * MAX_Y;
-    return 10;
+    int totalEnemies = area / 10;
+    for(int i = 0; i < totalEnemies; i++)
+    {
+        Enemy e;
+        enemies.push_back(e);
+        cout << e.x() << "\t" << e.y() << "\n";
+    }
 }
 
 //draw the board, the player, and the enemies
@@ -43,6 +50,7 @@ void draw()
     }
 }
 
+//get the user input and move the player
 void getUserInput()
 {
     char input;
@@ -53,22 +61,25 @@ void getUserInput()
     else return;
 }
 
+void logic()
+{
+    for(Enemy enemy : enemies)
+    {
+        if(player == enemy) {gameOver = true;}
+    }
+}
+
 int main()
 {
-    int totalEnemies = spawnEnemies();
-    for(int i = 0; i < totalEnemies; i++)
-    {
-        Enemy e;
-        enemies.push_back(e);
-        cout << e.x() << "\t" << e.y() << "\n";
-    }
-
-    //cout << enemies.size();
+    spawnEnemies();
 
     while(!gameOver)
     {
         draw();
         getUserInput();
-        cout << player.x() << "\t" << player.y() << "\n";
+        logic();
     }
+
+    draw();
+    
 }
