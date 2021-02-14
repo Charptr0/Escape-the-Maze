@@ -1,5 +1,5 @@
 #pragma once
-#include "Entity.h"
+#include "entity.h"
 
 enum PositionX
 {
@@ -18,7 +18,7 @@ class Enemy : public Entity
     Enemy();
     void generatePosition(int &position, const char &axis);
 
-    int randomNumberGenerator(int lowerBound, int upperBound);
+    int randomNumberGenerator(const int &lowerBound, int const &upperBound);
 
     void move();
 };

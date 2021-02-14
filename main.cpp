@@ -17,7 +17,7 @@ bool gameOver = false;
 void spawnEnemies()
 {
     int area = MAX_X * MAX_Y;
-    int totalEnemies = area / 10;
+    int totalEnemies = 1; //area / 10;
     for(int i = 0; i < totalEnemies; i++)
     {
         Enemy e;
@@ -39,6 +39,7 @@ void draw()
 
             for(size_t k = 0; k < enemies.size(); k++) //handle the enemies
             {
+                //cout << enemies[k].x() << "\t" << enemies[k].y() << "\n";
                 if(enemies[k].x() == j && enemies[k].y() == i) {cout << "X"; break;}
                 
                 else if(k == (enemies.size()-1)) {cout << "-";}
@@ -65,7 +66,10 @@ void logic()
 {
     for(Enemy enemy : enemies)
     {
-        if(player == enemy) {gameOver = true;}
+        if(player == enemy) {gameOver = true; break;}
+        //cout << enemy.x() << "\t" << enemy.y() << "\n";
+        enemy.move();
+        cout << enemy.x() << "\t" << enemy.y() << "\n";
     }
 }
 
@@ -81,5 +85,4 @@ int main()
     }
 
     draw();
-    
 }

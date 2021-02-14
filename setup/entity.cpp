@@ -19,6 +19,12 @@ void Entity::setPosition(const int coordinate[2])
     this->coordinate[axis::y] = coordinate[axis::y];
 }
 
+void Entity::setPosition(const int &x, const int &y)
+{
+    this->coordinate[axis::x] = x;
+    this->coordinate[axis::y] = y;
+}
+
 
 
 

@@ -7,6 +7,7 @@ bool clockStarted = false;
 
 void startClock() {std::srand(time(NULL));}
 
+//constructor
 Enemy::Enemy()
 {
     if(!clockStarted) {startClock(); clockStarted = true;}
@@ -23,9 +24,27 @@ void Enemy::generatePosition(int &position, const char &axis)
     else return;
 }
 
-int Enemy::randomNumberGenerator(int lowerBound, int upperBound)
+//generate a random number based on a lowerbound and an upperbound
+int Enemy::randomNumberGenerator(const int &lowerBound, const int &upperBound)
 {
     return (rand() % (upperBound+1)) + lowerBound; 
+}
+
+//move the enemy
+void Enemy::move()
+{
+    int prevCoordinate[2];
+    prevCoordinate[axis::x] = this->coordinate[axis::x];
+    prevCoordinate[axis::y] = this->coordinate[axis::y];
+
+    int move = randomNumberGenerator(0,1);
+
+    int moveX_decider = randomNumberGenerator(0,1);
+    int moveY_decider = randomNumberGenerator(0,1);
+
+    if(move == axis::x) {moveX_decider == 0 ? this->coordinate[axis::x] -= 1 : this->coordinate[axis::x] += 1;}
+    else {moveY_decider == 0 ? this->coordinate[axis::y] -= 1 : this->coordinate[axis::y] += 1;}
+
 }
 
 
