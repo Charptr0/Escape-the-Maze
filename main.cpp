@@ -25,7 +25,6 @@ void spawnEnemies()
     {
         Enemy e;
         enemies.push_back(e);
-        cout << e.x() << "\t" << e.y() << "\n";
         deathPosition.push_back({e.x(), e.y()});
     }
 }
@@ -39,11 +38,7 @@ void draw()
         for(int j = 0; j < MAX_X; j++)
         {
             if(i == 0 || i == (MAX_Y-1) || j == (MAX_X-1)) {cout << "*"; continue;} //handles the borders
-            if(player.x() == j && player.y() == i) 
-            {
-                //if(player.x() == 5 && player.y() == 5) {victory = true; gameOver = true;}
-               {cout << "P"; continue;}
-            } //draw the player
+            if(player.x() == j && player.y() == i) {cout << "P"; continue;} //draw the player
 
             for(size_t k = 0; k < enemies.size(); k++) //handle the enemies
             {
@@ -100,10 +95,12 @@ int main()
         logic();
     }
 
-    draw(); //draw the board one last time
+    draw(); //draw the map one last time
 
     if(victory) {printf("You have escaped the maze\n");} //if the player has escaped
     else {printf("You have died in the maze\n");} //if the player has died
 
     printf("Total Moves: %d\n", totalMoves); //show the score
+
+    system("pause");
 }
