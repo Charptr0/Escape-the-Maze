@@ -8,7 +8,7 @@ You will always be on the top left corner and the exit will always going to be i
 
 ## Gameplay
 
-<img src="https://i.imgur.com/7j1KyYE.png" align="right"></img>
+<img src="https://i.imgur.com/7j1KyYE.png" align="right" width="20%"></img>
 * Use WASD to move the player ("P")
 * Everytime you make a move, they will move ("X")
 * Depending the size of the map, it will automatically create the appropriate amount of enemies
