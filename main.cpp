@@ -84,8 +84,15 @@ void logic()
     }
 }
 
+void mainMenu()
+{
+    cout << "Escape the Maze\n";
+    system("pause");
+}
+
 int main()
 {
+    mainMenu();
     spawnEnemies();
 
     while(!gameOver)
@@ -102,5 +109,5 @@ int main()
 
     printf("Total Moves: %d\n", totalMoves); //show the score
 
-    system("pause");
+    system("pause"); //pause the console
 }
