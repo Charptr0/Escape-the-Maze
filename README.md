@@ -8,7 +8,7 @@ You will always be on the top left corner and the exit will always going to be i
 
 ## Gameplay
 
-<img src="https://i.imgur.com/7j1KyYE.png" align="left" width="25%"></img> <img src="https://i.imgur.com/KDvYhmi.png" align="right" width="21%"></img>
+<img src="https://i.imgur.com/7j1KyYE.png" align="left" width="28%"></img> <img src="https://i.imgur.com/KDvYhmi.png" align="right" width="23%"></img>
 <ul align="center">
   <li>Use WASD to move the player ("P")</li>
   <li>Everytime you make a move, they will move ("X")</li>
