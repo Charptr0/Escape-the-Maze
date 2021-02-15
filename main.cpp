@@ -1,5 +1,5 @@
-#include <iostream> 
-#include <vector>
+#include <iostream> //cout, cin
+#include <vector> //std::vector
 #include "setup/player.cpp"
 #include "setup/enemy.cpp"
 #include "setup/operators.cpp"
@@ -72,6 +72,7 @@ void getUserInput()
     else return;
 }
 
+//move the enemy, update the death position vector, determine the fate of the player
 void logic()
 {
     deathPosition.clear();
