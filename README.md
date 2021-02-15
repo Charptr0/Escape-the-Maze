@@ -12,7 +12,6 @@ You will always be on the top left corner and the exit will always going to be i
 <ul align="center">
   <li>Use WASD to move the player ("P")</li>
   <li>Everytime you make a move, they will move ("X")</li>
-  <li>The game will automatically spawn the appropriate amount of enemies based on the size of the map</li>
   <li>Depending the size of the map, it will automatically create the appropriate amount of enemies</li>
   <li>The game will end if you either made it to the exit ("E") or got caught by an enemy</li>
   <li>Try to finish the game with the least amount of moves</li>
