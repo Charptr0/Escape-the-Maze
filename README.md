@@ -8,14 +8,13 @@ You will always be on the top left corner and the exit will always going to be i
 
 ## Gameplay
 
-<img src="https://i.imgur.com/7j1KyYE.png" align="left" width="28%"></img> <img src="https://i.imgur.com/KDvYhmi.png" align="right" width="23%"></img>
-<ul align="center">
-  <li>Use WASD to move the player ("P")</li>
-  <li>Everytime you make a move, they will move ("X")</li>
-  <li>Depending the size of the map, it will automatically create the appropriate amount of enemies</li>
-  <li>The game will end if you either made it to the exit ("E") or got caught by an enemy</li>
-  <li>Try to finish the game with the least amount of moves</li>
-</ul>
+<img src="https://i.imgur.com/7j1KyYE.png" align="right"></img>
+* Use WASD to move the player ("P")
+* Everytime you make a move, they will move ("X")
+* Depending the size of the map, it will automatically create the appropriate amount of enemies
+* The game will end if you either made it to the exit ("E") or got caught by an enemy
+* Try to finish the game with the least amount of moves
+
 
 ## Demo
 <img src="https://i.imgur.com/jkcEX7g.gif" ></img>
