@@ -2,7 +2,7 @@
 
 Your mission is to guide the "P" to the exit ("E"). Exery move you make, will cause the enemy ("X") to move as well. Try your best to avoid the enemies and reach the exit in the shortest amount of moves.
 
-The enemies' postion are randomized, meaning that every new game, they are going to be in a different location. However, you the player, and the exit are static. 
+The enemies' positions are randomized, meaning that every new game, they are going to be in a different location. However, you the player, and the exit are static. 
 You will always be on the top left corner and the exit will always going to be in the bottom right corner.
 
 
